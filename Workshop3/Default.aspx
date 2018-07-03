@@ -30,6 +30,12 @@
                     HotSpotMode="Navigate" NavigateUrl="city.html"
                     Coordinates="194,174,244,183,204,219,168,184" />
             </asp:ImageMap>
+            <br />
+            <%--AdRotator randomly generates images based on an xml file--%>
+            <asp:AdRotator ID="AdRotator1" runat="server"
+                DataSourceID="XmlDataSource1" />
+            <asp:XmlDataSource ID="XmlDataSource1" runat="server"
+                DataFile="static/ads.xml" />
         </div>
     </form>
 </body>
